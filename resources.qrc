@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>shaders/pass_through.vert</file>
+        <file>shaders/simple.frag</file>
+        <file>bunny.obj</file>
+        <file>assets/shotgun.fbx</file>
+        <file>assets/WatchTower.obj</file>
+        <file>assets/DamagedHelmet.bin</file>
+        <file>assets/DamagedHelmet.gltf</file>
+    </qresource>
+</RCC>
