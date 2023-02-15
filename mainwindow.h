@@ -4,7 +4,7 @@
 #include <random>
 
 #include <QMainWindow>
-#include <QDesktopWidget>
+//#include <QDesktopWidget>
 #include <QPushButton>
 #include <QLabel>
 #include <QLayout>

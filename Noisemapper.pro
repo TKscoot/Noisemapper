@@ -1,4 +1,4 @@
-QT       += core gui widgets opengl
+QT       += core gui widgets openglwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets opengl
 
@@ -23,11 +23,23 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-
+unix:!macx {
 LIBS += -L/usr/local/lib/ -lqtadvanceddocking -lassimp
 
 INCLUDEPATH += /usr/local/include
-#LIBS += -lGL -lGLU
+}
+
+windows {
+LIBS += -L'C:\\Program Files (x86)\\Assimp\bin'
+LIBS += -L'C:\\Program Files (x86)\\Assimp\lib'
+LIBS += -L'C:\Users\talis.kapfhammer\OneDrive - Accenture\Documents\git\build-ads-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug\lib'
+
+LIBS += -lassimp-vc143-mtd -lqtadvanceddockingd
+
+INCLUDEPATH += 'C:\\Program Files (x86)\\Assimp\include'
+INCLUDEPATH += 'C:\Users\talis.kapfhammer\OneDrive - Accenture\Documents\git\Qt-Advanced-Docking-System\src'
+
+}
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
